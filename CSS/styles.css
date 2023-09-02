@@ -36,8 +36,19 @@ header {
   border-bottom: var(--accent) 1px solid;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+}
+
 a {
   text-decoration: none;
+  color: var(--text);
 }
 
 p {
@@ -45,6 +56,7 @@ p {
   letter-spacing: 0.02em;
   color: var(--text);
 }
+
 
 h2 {
   font-size: 36px;
@@ -73,8 +85,10 @@ img {
 
 .container {
   max-width: 428px;
-  margin: 0 auto;
-  padding: 0 15px 0 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
   overflow: hidden;
 }
 
@@ -121,17 +135,29 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* MENU --------------------------------------------------------- */
+/* TOPLINE --------------------------------------------------------- */
 
 .topline {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-end;
   padding: 24px 0;
   flex-wrap: nowrap;
 }
 
-/* TOPLINE --------------------------------------------------------- */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .menu {
+    display:flex;
+
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  
+}
 
 .logo_web,
 .logo_studio {
@@ -141,8 +167,8 @@ img {
   text-transform: uppercase;
   font-weight: 800;
   font-size: 18px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
+  line-height: 1.16;
+  letter-spacing: 0.54px;
 }
 
 .logo_studio {
@@ -150,15 +176,15 @@ img {
   margin-right: 76px;
 }
 
-.menu {
-  display: flex;
-  align-items: center;
-}
-
 .menu-nav {
   display: flex;
   gap: 40px;
-  margin-right: 332px;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-nav {
+    display: none;
+  }
 }
 
 .contact {
@@ -167,9 +193,30 @@ img {
   align-items: center;
 }
 
-/* NAVBAR --------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+  .contact {
+    display: none;
+  }
+}
 
-.contact .button {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact {
+    flex-direction: column;
+    gap: 12px;
+  
+  }
+  
+  .contact a {
+    font-style: normal;
+    color: var(--text);
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.48px;
+  }
+}
+
+
+/* .contact a {
   font-family: inherit;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -182,7 +229,7 @@ img {
   color: var(--pressed-state);
   transition-duration: 250ms, 0s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
 .menu-nav a {
   text-decoration: none;
@@ -231,6 +278,12 @@ img {
   background-color: var(--pressed-state);
 }
 
+/* MENU TOOGLE BUTTON -------------------------------------------*/
+
+
+
+
+
 /* HERO --------------------------------------------------------- */
 
 .hero {
@@ -239,9 +292,38 @@ img {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
+    url(../images/people-office2x.jpg);
   max-width: 1440px;
   margin: 0 auto;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/people-office2x.jpg);
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-bottom: 112px;
+    padding-top: 112px;
+    max-width: 768px;
+    max-height: 436px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-bottom: 188px;
+    padding-top: 188px;
+    max-width: 1440px;
+    max-height: 600px;
+  }
 }
 
 .hero .container {
@@ -249,20 +331,40 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 48px;
+
 }
 
 .hero h1 {
   text-align: center;
   color: var(--white-background);
+  text-align: center;
   font-size: 56px;
-  font-style: normal;
   font-weight: 700;
-  line-height: 1.07;
-  letter-spacing: 0.02em;
+  line-height: 1.08;
+  letter-spacing: 1.12px;
+  margin: auto;
+  margin-bottom: 48px;
   max-width: 496px;
 
-  margin-top: 68px;
+}
+@media screen and (min-width: 768px) {
+  .hero h1 {
+    font-size: 56px;
+    letter-spacing: 1.12px;
+    max-width: 496px;
+    line-height: 1.07;
+    margin-bottom: 36px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero h1 {
+    font-size: 56px;
+    letter-spacing: 1.12px;
+    max-width: 496px;
+    line-height: 1.07;
+    margin-bottom: 48px;
+  }
 }
 
 .hero_button {
