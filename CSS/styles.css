@@ -419,11 +419,79 @@ img {
   padding: 24px 100px;
 }
 
+.virtues h3 {
+  text-align: left;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height:1.2;
+  letter-spacing: 0.72px;
+}
+
 .virtues p {
   margin-top: 8px;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  
+  .virtues {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+
+  .virtues li {
+    max-width: 356px;
+  }
+
+  .virtues_icon {
+    display: none;
+  }
+
+  .virtues h3 {
+    text-align: left;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+  }
+
+  .virtues p {
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  
+  .virtues {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+  }
+
+  .virtues li {
+    max-width: 396px;
+  }
+
+  .virtues_icon {
+    display: none;
+  }
+ 
+  .virtues h3 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+  }
+  }
+
+
+
+
 
 /* WHAT ARE WE DOING --------------------------------------------------------- */
 
