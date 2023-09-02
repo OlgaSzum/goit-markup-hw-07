@@ -34,14 +34,18 @@
             </ul>
 
 <!-- menu toogle ---------------------->
-<button class="menu-toggle js-open-menu" aria-expanded="false"
+
+<button class="menu-toggle js-open-menu" 
+        aria-expanded="false"
          aria-controls="mobile-menu">
          <div class="hamburger-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="22" viewBox="0 0 32 22" fill="none">
-                <path d="M1.34766 20.0431H30.8861M1.34766 10.7354H30.8861M1.34766 1.42773H30.8861" stroke="#2E2F42" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <svg  width="32px" height="22px">
+                <use href="./images/icons.svg#icon-hamburger"></use>
               </svg>
             </div>
-          </button>
+          </button> 
+
+
         </div> <!-- topline container div closing-->
     </header>
 <main>
@@ -255,7 +259,52 @@
 
 
 
+ 
+<div class="menu-container js-menu-container" id="mobile-menu">
+    <button class="menu-toggle js-close-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+            <g clip-path="url(#clip0_595494_527)">
+            <path d="M8 0.805714L7.19429 0L4 3.19429L0.805714 0L0 0.805714L3.19429 4L0 7.19429L0.805714 8L4 4.80571L7.19429 8L8 7.19429L4.80571 4L8 0.805714Z" fill="#2E2F42"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_595494_527">
+            <rect width="8" height="8" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>
+    </button>
 
+<div class="toggle-content">
+    <ul class="mobile-menu list">
+      <li><a href="index.html" class="link">Studio</a></li>
+      <li><a href="portfolio.html" class="link">Portfolio</a></li>
+      <li><a href="#" class="link">Contacts</a></li>
+    </ul>
+
+    <ul class="list">
+        <li><a href="tel:+11(000)1111111">+11 (000) 111-11-11</a></li>
+        <li><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+        
+    </ul>
+
+    <ul class="our-team_social list">
+        <li><div  tabindex="0" class="icon_div"><svg class="icon_self"><use href="./images/icons.svg#icon-instagram-2" width="16"></use></svg></div></li>
+        <li><div  tabindex="0" class="icon_div"><svg class="icon_self"><use href="./images/icons.svg#icon-twitter-1" width="16"></use></svg></div></li>
+        <li><div  tabindex="0" class="icon_div"><svg class="icon_self"><use href="./images/icons.svg#icon-facebook-1" width="16"></use></svg></div></li>
+        <li><div  tabindex="0" class="icon_div"><svg class="icon_self"><use href="./images/icons.svg#icon-linkedin-1" width="16"></use></svg></div></li>
+    </ul>
+</div>
+
+    
+  </div>
+
+  <script
+    defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="js/mobile-menu.js"></script>
 
 
 
@@ -337,7 +386,7 @@
   
         <label class="consent">
             <input class="terms_input" type="checkbox" name="terms" value="terms" required />
-                <svg class="terms_icon-checked" width="16" height="16"><use href="images/icons.svg#checkbox"></use></svg>
+                <svg class="terms_icon-checked" width="16" height="16"><use href="images/icons.svg#ic"></use></svg>
                 <p>I accept the terms and conditions of the <a href="#">Privacy Policy</a></p>
                 </label>
               

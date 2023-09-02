@@ -145,6 +145,11 @@ img {
   flex-wrap: nowrap;
 }
 
+@media screen and (max-width: 767px) {
+  .topline {
+    justify-content: space-between;
+  }
+}
 
 .menu {
   display: flex;
@@ -210,21 +215,6 @@ img {
 }
 
 
-/* .contact a {
-  font-family: inherit;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--text);
-  width: 151px;
-  height: 24px;
-}
-
-.contact a:is(:hover, :focus) {
-  color: var(--pressed-state);
-  transition-duration: 250ms, 0s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-} */
-
 .menu-nav a {
   text-decoration: none;
   cursor: pointer;
@@ -275,10 +265,154 @@ img {
 /* MENU TOOGLE BUTTON -------------------------------------------*/
 
 
+.menu-toggle {
+  display: flex;
+  margin-right: 8px;
+  background: none;
+}
+
+@media screen and (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.hamburger-icon {
+  max-width: 32px;
+  max-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  stroke: var(--dark);
+  stroke-width: 2px;
+}
 
 
 
-/* HERO --------------------------------------------------------- */
+/* MENU MOBILE */
+
+.menu-container {
+  min-width: 320px;
+  max-width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mobile-menu .link {
+  color: var(--dark);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+}
+
+.mobile-menu .link:hover,
+.mobile-menu .link:focus {
+  color: var(--pressed-state);
+}
+
+.menu-toggle {
+  min-height: 24px;
+  min-width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: var(--white-background);
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+}
+
+.menu-container .our-team_social {
+  max-width: 328px;
+  margin-bottom: 40px;
+}
+
+.toggle-content {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  gap: 40px;
+}
+
+.toggle-content a {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: var(--dark);
+}
+
+.toggle-content .list {
+  gap: 40px
+}
+
+
+
+
+
+
+
+
+
+
+/* HERO ----------------------------------------------------------------- */
 
 .hero {
   background-color: var(--dark);
@@ -637,7 +771,7 @@ img {
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 72px;
-    justify-content: flex-start
+    justify-content: flex-start;
     padding-bottom: 96px;
     padding-left: 108px;
   }
@@ -1256,3 +1390,4 @@ form {
   top: 78.7%;
   left: 8.5%;
 }
+
