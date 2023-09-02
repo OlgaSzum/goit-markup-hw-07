@@ -173,12 +173,12 @@ img {
 
 .logo_studio {
   color: var(--dark);
-  margin-right: 76px;
 }
 
 .menu-nav {
   display: flex;
   gap: 40px;
+  margin-left: 76px;
 }
 
 @media screen and (max-width: 767px) {
@@ -618,16 +618,59 @@ img {
   display: flex;
   padding-top: 101.5px;
   padding-bottom: 100px;
-  align-items: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer .container {
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .footer_input_email {
+    max-width: 264px;
+  }
+ 
+}
+
+@media screen and (max-width: 767px) {
+
+  .footer .container {
+    flex-direction: column;
+    gap: 72px;
+    align-items: center;
+  }
+
+  .footer_motto_div {
+    align-items: center;
+    max-width: 268px;
+  }
+
+  .footer_social_div {
+    align-items: center;
+  }
+  
+  .footer_sub_div {
+    align-items: center;
+  }
+
+  .user-email {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer_input_email {
+    max-width: 398px;
+  }
 }
 
 .footer_motto_div {
   display: flex;
   flex-direction: column;
   gap: 17.5px;
-  width: 264px;
-  height: 72px;
-  margin-right: 120px;
+  max-width: 264px;
 }
 
 .footer_motto_div p {
@@ -642,7 +685,6 @@ img {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-right: 80px;
 }
 
 .footer_social_div p {
@@ -688,6 +730,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 16px;
+
 }
 
 .footer_sub_div p {
@@ -708,6 +751,8 @@ img {
   align-items: baseline;
   justify-items: flex-end;
   gap: 24px;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer_input_email {
@@ -735,7 +780,7 @@ footer::placeholder {
 }
 
 .footer_sub_button {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 
@@ -777,6 +822,31 @@ footer::placeholder {
   gap: 24px;
 }
 
+@media screen and (min-width: 769px) and (max-width: 1999px) {
+  .customers_div {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;
+    justify-content: center;
+  }
+
+  .customers {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .customers_div {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 396px;
+    row-gap: 72px;
+    column-gap: 16px;
+    justify-content: center;
+  }
+}
+
 .client_div {
   display: flex;
   justify-content: center;
@@ -798,13 +868,7 @@ footer::placeholder {
   cursor: pointer;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1999px) {
-  .customers_div {
-    display:flex;
-    flex-wrap: wrap;
-    column-gap: 24px;
-  }
-}
+
 
 /* PORTFOLIO --------------------------------------------------------- */
 
