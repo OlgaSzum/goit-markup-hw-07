@@ -131,8 +131,7 @@ img {
 
 .button:is(:hover, :focus) {
   color: var(--pressed-state);
-  transition-duration: 250ms, 0s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--standard-animation);
 }
 
 /* TOPLINE --------------------------------------------------------- */
@@ -234,8 +233,7 @@ img {
 
 .menu-nav a:is(:hover, :focus) {
   color: var(--pressed-state);
-  transition-duration: 250ms, 0s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--standard-animation);
 }
 
 .menu-nav_studio::after {
@@ -275,6 +273,9 @@ img {
   .menu-toggle {
     display: none;
   }
+  .menu-container {
+    display:none;
+  }
 }
 
 .hamburger-icon {
@@ -288,8 +289,7 @@ img {
 }
 
 
-
-/* MENU MOBILE */
+/* MENU MOBILE ---------------------------------------------------*/
 
 .menu-container {
   min-width: 320px;
@@ -300,13 +300,21 @@ img {
   margin-right: auto;
 }
 
+.toggle-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .mobile-menu {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  margin-top: 40px;
 }
 
-.mobile-menu .link {
+.mobile-menu a {
   color: var(--dark);
   font-size: 36px;
   font-style: normal;
@@ -316,10 +324,55 @@ img {
   text-transform: capitalize;
 }
 
-.mobile-menu .link:hover,
-.mobile-menu .link:focus {
+.mobile-menu a:is(:hover, :focus) {
   color: var(--pressed-state);
 }
+
+.mobile-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mobile-contact a {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+  font-style: normal;
+  color: var(--text);
+}
+
+.mobile-contact a:is(:hover, :focus) {
+  color: var(--primary-brand);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.111;
+  letter-spacing: 0.72px;
+}
+
+.mobile-social {
+  display: flex;
+  max-width: 328px;
+  justify-content: space-between;
+}
+
+.mobile-social .icon_div {
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-social svg {
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+
+}
+
 
 .menu-toggle {
   min-height: 24px;
@@ -360,7 +413,6 @@ img {
 
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
-
 }
 
 .menu-container.is-open {
@@ -373,42 +425,6 @@ img {
   right: 16px;
   color: #fff;
 }
-
-.mobile-menu {
-  padding: 0;
-  margin: 0;
-}
-
-.menu-container .our-team_social {
-  max-width: 328px;
-  margin-bottom: 40px;
-}
-
-.toggle-content {
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
-  gap: 40px;
-}
-
-.toggle-content a {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: 0.04em;
-  color: var(--dark);
-}
-
-.toggle-content .list {
-  gap: 40px
-}
-
-
-
-
-
-
-
 
 
 
@@ -511,8 +527,7 @@ img {
 .hero_button:is(:hover, :focus) {
   background-color: var(--pressed-state);
   box-shadow: 0px 4px 4px 0px var(--button-shadow);
-  transition-duration: 250ms, 0s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--standard-animation);
 }
 
 /* VIRTUES --------------------------------------------------------- */
@@ -591,9 +606,9 @@ img {
 
 @media screen and (max-width: 767px) {
 
-.reduced-section2 {
-    padding-bottom: 0; 
-}
+  .reduced-section2 {
+      padding-bottom: 0; 
+  }
 
   .virtues_div {
     align-items: center;
@@ -603,7 +618,6 @@ img {
     display: flex;
     flex-direction: column;
     gap: 72px;
-    
   }
 
   .virtues li {
@@ -730,8 +744,7 @@ img {
 .icon_div:is(:hover, :focus) {
   background-color: var(--pressed-state);
   cursor: pointer;
-  transition-duration: 250ms, 0s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--standard-animation);
 }
 
 .icon_self {
@@ -862,8 +875,7 @@ img {
 .footer_icon_div:is(:hover, :focus) {
   background-color: var(--success);
   cursor: pointer;
-  transition-duration: 250ms, 0s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--standard-animation);
 }
 
 .footer_icon_self {
@@ -955,8 +967,7 @@ footer::placeholder {
   background-color: var(--pressed-state);
   cursor: pointer;
   box-shadow: 0px 4px 4px 0px var(--button-shadow);
-  transition-duration: 250ms, 0s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--standard-animation);
 }
 
 /* CUSTOMERS --------------------------------------------------------- */
@@ -1051,8 +1062,7 @@ footer::placeholder {
   border: none;
   box-shadow: 0px 4px 4px 0px var(--button-shadow);
   color: var(--white-background);
-  transition-duration: 250ms, 0s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--standard-animation);
 }
 
 .gallery {
@@ -1081,8 +1091,7 @@ footer::placeholder {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-  transition-duration: 250ms, 0s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--standard-animation);
 }
 
 .gallery_card-content {
@@ -1131,8 +1140,7 @@ footer::placeholder {
 
 .overlay-box:is(:hover, :focus) .overlay {
   transform: translatex(0);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--standard-animation);
 }
 
 /* MODAL CLOSE BUTTON ---------------------------------------------- */
@@ -1167,8 +1175,7 @@ footer::placeholder {
   background-color: var(--pressed-state);
   fill: var(--white-background);
   cursor: pointer;
-  transition-duration: 250ms, 0s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--standard-animation);
 }
 
 /* MODAL ---------------------------------------------------------- */
